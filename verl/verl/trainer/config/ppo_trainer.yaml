@@ -31,7 +31,7 @@ actor_rollout_ref:
     use_kl_loss: False # True for GRPO
     kl_loss_coef: 0.001 # for GRPO
     kl_loss_type: low_var_kl # for GRPO
-    grpo_type: RL # algorithm selection
+    loss_type: RL # algorithm selection
     max_num_tokens: ${data.max_response_length} # for DR. GRPO
     ppo_kl_type: kl # for disco
     delta: 1e-4    # for disco

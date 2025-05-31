@@ -256,14 +256,14 @@ class DataParallelPPOActor(BasePPOActor):
 
                     entropy, log_prob = self._forward_micro_batch(micro_batch=data, temperature=temperature)
 
-                    if self.config.grpo_type == 'grpo':
+                    if self.config.loss_type == 'grpo':
                         pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_grpo(old_log_prob=old_log_prob,
                                                                                     log_prob=log_prob,
                                                                                     advantages=advantages,
                                                                                     eos_mask=response_mask,
                                                                                     cliprange=clip_ratio)
 
-                    elif self.config.grpo_type == 'discob_Lratio':
+                    elif self.config.loss_type == 'discob_Lratio':
                         pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_discob_Lratio(old_log_prob=old_log_prob,
                                                                                     log_prob=log_prob,
                                                                                     advantages=advantages,
@@ -273,7 +273,7 @@ class DataParallelPPOActor(BasePPOActor):
                                                                                     delta=delta,
                                                                                     beta=beta,
                                                                                     kl_type=kl_type)
-                    elif self.config.grpo_type == 'discob_logL':
+                    elif self.config.loss_type == 'discob_logL':
                         pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_discob_logL(old_log_prob=old_log_prob,
                                                                                     log_prob=log_prob,
                                                                                     advantages=advantages,
@@ -283,7 +283,7 @@ class DataParallelPPOActor(BasePPOActor):
                                                                                     delta=delta,
                                                                                     beta=beta,
                                                                                     kl_type=kl_type)
-                    elif self.config.grpo_type == 'disco_Lratio':
+                    elif self.config.loss_type == 'disco_Lratio':
                         pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_discob_Lratio(old_log_prob=old_log_prob,
                                                                                     log_prob=log_prob,
                                                                                     advantages=advantages,
@@ -294,7 +294,7 @@ class DataParallelPPOActor(BasePPOActor):
                                                                                     beta=beta,
                                                                                     tau=tau,
                                                                                     kl_type=kl_type)
-                    elif self.config.grpo_type == 'disco_logL':
+                    elif self.config.loss_type == 'disco_logL':
                         pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_disco_logL(old_log_prob=old_log_prob,
                                                                                     log_prob=log_prob,
                                                                                     advantages=advantages,

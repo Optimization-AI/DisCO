@@ -88,6 +88,7 @@ Training dynamics of different methods: left two are for fine-tuning 1.5B model 
 # Recommend Python 3.10.
 conda create -n disco python=3.10
 conda activate disco
+git clone https://github.com/Optimization-AI/DisCO.git
 cd DisCO
 pip install -e ./verl
 pip install -e ./deepscaler
@@ -155,7 +156,7 @@ We report Pass@1 accuracy averaged over 16 samples for each problem. To replicat
 ```
 
 ## Acknowledgements
-- Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm). We thank the authors for open-sourcing their code.
+- Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm/tree/deepscaler). We thank the authors for open-sourcing their code.
 
 
 
