@@ -284,7 +284,7 @@ class DataParallelPPOActor(BasePPOActor):
                                                                                     beta=beta,
                                                                                     kl_type=kl_type)
                     elif self.config.loss_type == 'disco_Lratio':
-                        pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_discob_Lratio(old_log_prob=old_log_prob,
+                        pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_disco_Lratio(old_log_prob=old_log_prob,
                                                                                     log_prob=log_prob,
                                                                                     advantages=advantages,
                                                                                     eos_mask=response_mask,
