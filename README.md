@@ -95,6 +95,12 @@ pip install -e ./deepscaler
 pip install wandb
 ```
 
+If the above commands install other versions of `vllm` rather than `vllm==0.6.3` and you can't manually install `vllm==0.6.3` due to the conflicting dependencies related to `outlines`, please try the following workaround:
+```bash
+pip install --no-deps vllm==0.6.3
+pip install outlines==0.0.6 xformers==0.0.27.post2  torchvision==0.19 torch==2.4.0 lm-format-enforcer==0.10.6 gguf==0.10.0 pyzmq partial-json-parser msgspec mistral-common 
+pip uninstall -y vllm-flash-attn
+```
 ### Datasets
 
 Datesets utilized in our training are included in the `datasets` folder. Feel free to adapt  file `scripts/data/deepscaler_dataset.py` to generate your own datasets.
