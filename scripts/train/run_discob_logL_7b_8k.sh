@@ -28,6 +28,9 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.actor.use_kl_loss=False \
     actor_rollout_ref.actor.kl_loss_coef=0.001 \
     actor_rollout_ref.actor.kl_loss_type=low_var_kl \
+    actor_rollout_ref.actor.ppo_kl_type=kl \
+    actor_rollout_ref.actor.delta=1e-4 \
+    actor_rollout_ref.actor.beta=1e3 \
     actor_rollout_ref.actor.entropy_coeff=0.0 \
     actor_rollout_ref.actor.loss_type=discob_logL  \
     actor_rollout_ref.actor.ulysses_sequence_parallel_size=1 \
