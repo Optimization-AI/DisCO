@@ -19,7 +19,7 @@ We analyzed GRPO and its variants (Dr. GRPO, DAPO, etc) under a binary reward se
 
 ---
 
-### 💡 Introducing **DisCO** — *Discriminative Constrained Optimization*
+### 💡 Introducing **DisCO** — *Discrithe minative Constrained Optimization*
 
 **DisCO** is a new RL framework grounded in **discriminative learning**. It trains models by **increasing scores for positive answers while decreasing those for negatives**, enabling:
 
@@ -162,7 +162,7 @@ We report Pass@1 accuracy averaged over 16 samples for each problem. To replicat
 ```
 
 ## Acknowledgements
-- Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm/tree/deepscaler). We thank the authors for open-sourcing their code.
+- Our training pipeline is built on the Github repository [DeepScaleR](https://github.com/agentica-project/rllm/tree/deepscaler) with [Verl](https://github.com/volcengine/verl) framework. We thank the authors for open-sourcing their code.
 
 
 
