@@ -19,7 +19,7 @@ We analyzed GRPO and its variants (Dr. GRPO, DAPO, etc) under a binary reward se
 
 ---
 
-### 💡 Introducing **DisCO** — *Discrithe minative Constrained Optimization*
+### 💡 Introducing **DisCO** — *Discriminative Constrained Optimization*
 
 **DisCO** is a new RL framework grounded in **discriminative learning**. It trains models by **increasing scores for positive answers while decreasing those for negatives**, enabling:
 
