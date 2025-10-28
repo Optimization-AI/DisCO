@@ -4,7 +4,7 @@
 
 📢 **[Oct 2025]:**
 Building on DisCO framework, we developed an **efficient reasoning** method that achieves **77% length reduction** with only
-1.1% performance loss on GSM8k dataset using a 1.5B model, compared with DisCO's strong performance. Refer to [Paper](https://www.arxiv.org/abs/2510.04474) and [Code](https://github.com/Optimization-AI/DRPO).
+1.1% performance loss on simple GSM8k dataset using a 1.5B model, compared with DisCO's strong performance. Refer to [Paper](https://www.arxiv.org/abs/2510.04474) and [Code](https://github.com/Optimization-AI/DRPO).
 
 **[Sep 2025]:**
 Our paper "DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization" has been **accepted at NeurIPS 2025** 🎉.
